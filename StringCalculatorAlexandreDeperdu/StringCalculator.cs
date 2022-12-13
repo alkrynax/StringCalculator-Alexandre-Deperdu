@@ -7,9 +7,9 @@ namespace StringCalculatorAlexandreDeperdu
 
         public static object Add(string chaine)
         {
-            var délimitateur = ",";
+            
             var elementsAsString = chaine.Replace(Environment.NewLine, string.Empty)
-                .Split(délimitateur);
+                .Split(",");
             return String.Concat(elementsAsString);
 
         }

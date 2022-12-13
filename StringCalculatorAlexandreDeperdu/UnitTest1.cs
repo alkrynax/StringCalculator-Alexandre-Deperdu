@@ -51,7 +51,20 @@ namespace StringCalculatorAlexandreDeperdu
             Assert.Equal("110", résultat);
         }
 
+        [Fact(DisplayName = "ETANT DONNE une chaîne \"-1, 0\" QUAND on l'envoie à Add ALORS une exception est lancée " +
+            "ET elle contient 1 en position ET elle contient -1 comme nombre fautif")]
+        public void TestNombreNegatif()
+        {
+            // ETANT DONNE une chaîne "-1, 0"
+            const string chaîne = $"-1,0";
 
+            // QUAND on l'envoie à Add
 
+            // ALORS une exception est lancée
+
+            // ET elle contient 1 en position
+
+            // ET elle contient -1 comme nombre fautif
+        }
     }
 }
