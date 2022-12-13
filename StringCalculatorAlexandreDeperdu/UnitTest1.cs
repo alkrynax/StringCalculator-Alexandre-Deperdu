@@ -18,6 +18,20 @@ namespace StringCalculatorAlexandreDeperdu
             Assert.Equal(x + y, résultat);
 
         }
+        [Theory(DisplayName = "ETANT DONNE n nombres \"x,y,....\"" +
+                            "QUAND on appelle Add" +
+                            "ALORS on obtient la somme de n nombres")]
+        [InlineData(1, 2, 3, 6)]
+        [InlineData(2, 8, 9, 6, 25)]
+        public void TestNombres(params int[] x)
+        {
+            //ETANT DONNE n nombres "x,y,...."
+            var entrée = string.Join(',', x);
+            //QUAND on appelle Add
+            var résultat = StringCalculator.Add(entrée);
+            //ALORS on obtient la somme de n nombres
+            Assert.Equal(x.Sum(), résultat);
+        }
     }
 }
     
