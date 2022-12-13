@@ -1,10 +1,14 @@
-﻿namespace StringCalculatorAlexandreDeperdu
+﻿using System.Threading.Channels;
+
+namespace StringCalculatorAlexandreDeperdu
 {
-    public class StringCalculator
+    internal class StringCalculator
     {
         public static object Add(string chaine)
         {
-            return 11;
+            var parties = chaine.Split(',');
+            return parties.ElementAt(0)+parties.ElementAt(1);
+
         }
     }
 }

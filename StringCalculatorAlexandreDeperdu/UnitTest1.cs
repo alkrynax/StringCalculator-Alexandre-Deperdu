@@ -1,23 +1,27 @@
+using Xunit.Sdk;
+
 namespace StringCalculatorAlexandreDeperdu
 {
     public class UnitTest1
     {
-        [Fact(DisplayName = "ETANT DONNE une chaine \"1,1\"" +
+        [Theory(DisplayName = "ETANT DONNE une chaine \"x,y\"" +
                             "QUAND on appelle Add" +
-                            "ALORS on obtient 1+1=11")]
-        public void Test1()
+                            "ALORS on obtient x+y")]
+        [InlineData(1, 2)]
+        [InlineData(0, 0)]
+        public void TestAjouter(int x, int y)
         {
-            //ETANT DONNE une chaine "1,1"
-            var chaine = "1,1";
+            //ETANT DONNE une chaine "x,y"
+            var chaine = $"{x},{y}";
             //QUAND on appelle Add
             var résultat = StringCalculator.Add(chaine);
 
-            //ALORS on obtient 11
-            Assert.Equal(11, résultat);
+            //ALORS on obtient x + y
+            Assert.Equal(x.ToString() + y.ToString(), résultat);
 
         }
-       
 
-     
+
+
     }
 }
