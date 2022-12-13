@@ -10,7 +10,7 @@ namespace StringCalculatorAlexandreDeperdu
             //ETANT DONNE une chaine "1,1"
             var chaine = "1,1";
             //QUAND on appelle Add
-            var résultat = StringCalculator.Add();
+            var résultat = StringCalculator.Add(chaine);
 
             //ALORS on obtient 11
             Assert.Equal(11, résultat);

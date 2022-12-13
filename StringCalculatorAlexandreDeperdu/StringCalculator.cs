@@ -2,8 +2,9 @@
 {
     public class StringCalculator
     {
-        public static object Add()
+        public static object Add(string chaine)
         {
+            return 11;
         }
     }
 }
