@@ -38,7 +38,7 @@ namespace StringCalculatorAlexandreDeperdu
         }
         [Fact(DisplayName= "ETANT DONNE une chaîne \"x, y\" ayant un saut de ligne en cours de nombre"+
                            "QUAND on l'envoie à Add"+
-                           "// ALORS on obtient un entier x+y")]
+                           "ALORS on obtient un entier x+y")]
         public void TestSautsLigne()
         {
             // ETANT DONNE une chaîne "x, y" ayant un saut de ligne en cours de nombre
@@ -51,8 +51,11 @@ namespace StringCalculatorAlexandreDeperdu
             Assert.Equal("110", résultat);
         }
 
-        [Fact(DisplayName = "ETANT DONNE une chaîne \"-1, 0\" QUAND on l'envoie à Add ALORS une exception est lancée " +
-            "ET elle contient 1 en position ET elle contient -1 comme nombre fautif")]
+        [Fact(DisplayName = "ETANT DONNE une chaîne \"-1, 0\" " +
+                            "QUAND on l'envoie à Add " +
+                            "ALORS une exception est lancée " +
+                            "ET elle contient 1 en position " +
+                            "ET elle contient -1 comme nombre fautif")]
         public void TestNombreNegatif()
         {
             // ETANT DONNE une chaîne "-1, 0"
