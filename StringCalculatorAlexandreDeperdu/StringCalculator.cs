@@ -2,9 +2,10 @@
 {
     public class StringCalculator
     {
-        public static object Add()
+        public static object Add(string chaine)
         {
-            return 2;
+            var parties = chaine.Split(',');
+            return int.Parse(parties[0])+ int.Parse(parties[1]);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace StringCalculatorAlexandreDeperdu
             //ETANT DONNE une chaine "x,y"
             var chaine = $"{x},{y}";
             //QUAND on appelle Add
-            var résultat = StringCalculator.Add();
+            var résultat = StringCalculator.Add(chaine);
 
             //ALORS on obtient x + y
             Assert.Equal(x + y, résultat);
