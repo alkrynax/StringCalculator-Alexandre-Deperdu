@@ -4,10 +4,13 @@ namespace StringCalculatorAlexandreDeperdu
 {
     internal class StringCalculator
     {
+
         public static object Add(string chaine)
         {
-            var parties = chaine.Split(',');
-            return String.Concat(parties);
+            var délimitateur = ",";
+            var elementsAsString = chaine.Replace(Environment.NewLine, string.Empty)
+                .Split(délimitateur);
+            return String.Concat(elementsAsString);
 
         }
     }

@@ -36,6 +36,20 @@ namespace StringCalculatorAlexandreDeperdu
             //ALORS on obtient la somme de n nombres
             Assert.Equal(String.Concat(x), résultat);
         }
+        [Fact(DisplayName= "ETANT DONNE une chaîne \"x, y\" ayant un saut de ligne en cours de nombre"+
+                           "QUAND on l'envoie à Add"+
+                           "// ALORS on obtient un entier x+y")]
+        public void TestSautsLigne()
+        {
+            // ETANT DONNE une chaîne "x, y" ayant un saut de ligne en cours de nombre
+            var chaîne = "1,1" + Environment.NewLine + "0";
+
+            // QUAND on l'envoie à Add
+            var résultat = StringCalculator.Add(chaîne);
+
+            // ALORS on obtient un entier x+y
+            Assert.Equal("110", résultat);
+        }
 
 
 
