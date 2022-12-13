@@ -12,8 +12,8 @@ namespace StringCalculatorAlexandreDeperdu
             //QUAND on appelle Add
             var résultat = StringCalculator.Add();
 
-            //ALORS on obtient 2
-            Assert.Equal(1 + 1, résultat);
+            //ALORS on obtient 11
+            Assert.Equal(11, résultat);
 
         }
        
