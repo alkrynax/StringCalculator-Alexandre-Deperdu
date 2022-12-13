@@ -7,7 +7,7 @@ namespace StringCalculatorAlexandreDeperdu
         public static object Add(string chaine)
         {
             var parties = chaine.Split(',');
-            return parties.ElementAt(0)+parties.ElementAt(1);
+            return String.Concat(parties);
 
         }
     }
