@@ -2,19 +2,22 @@ namespace StringCalculatorAlexandreDeperdu
 {
     public class UnitTest1
     {
-        [Fact(DisplayName = "ETANT DONNE une chaine \"1,1\"" +
+        [Theory(DisplayName = "ETANT DONNE une chaine \"x,y\"" +
                             "QUAND on appelle Add" +
-                            "ALORS on obtient 1+1=2")]
-        public void Test1()
+                            "ALORS on obtient x+y")]
+        [InlineData(1, 1)]
+        [InlineData(2, 2)]
+        public void Test1(int x, int y)
         {
-            //ETANT DONNE une chaine "1,1"
-            var chaine = "1,1";
+            //ETANT DONNE une chaine "x,y"
+            var chaine = $"{x},{y}";
             //QUAND on appelle Add
             var résultat = StringCalculator.Add();
 
-            //ALORS on obtient 2
-            Assert.Equal(1 + 1, résultat);
+            //ALORS on obtient x + y
+            Assert.Equal(x + y, résultat);
 
         }
     }
 }
+    
